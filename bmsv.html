@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="bmsv.js"></script>
+	<script type="text/javascript">
+	<!-- 
+	  var beatCount = 0;
+	  var bms = undefined;
+	
+		function loadBms(){
+			var l = document.bmsForm.bms.value;
+			bms = loadBmsWithText(l);
+			bmsViewer(bms, beatCount);
+		}
+		
+		window.addEventListener('load', eventWindowLoaded, false);
+		/*
+		var audioElement;
+		function eventWindowLoaded(e){
+			audioElement = document.createElement("audio");
+			document.body.appendChild(audioElement);
+			audioElement.setAttribute("src","audio.mp3");
+			audioElement.addEventListener("canplaythrough", audioLoaded, false);
+		}
+		var audioIsReady = false;
+		function audioLoaded(e){
+			audioIsReady = true;
+		}
+		*/
+
+	-->
+	</script>
+	<title>BMSV</title>
+</head>
+<body>
+<h3>load bms</h3>
+	<form name="bmsForm" action="#">
+		<textarea name="bms" rows="10" cols="60"></textarea><br />
+		<input type="button" onclick="loadBms()" value="Load BMS">
+	</form>
+<h3>canvas</h3>
+<canvas id="mainCanvas" width="640" height="480" style="background:url('bg.png')">
+Canvas not supported
+</canvas>
+<form name="countForm" action="#">
+		<input type="button" id="playBms" value="play BMS">
+</form>
+</body>
+</html>
